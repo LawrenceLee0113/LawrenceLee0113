@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>象棋by庭愷</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src = "script.js"></script>
+</head>
+
+<body>
+    
+    
+    <style>
+        #chessPlatform {
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            width: 400px;
+            height: 400px;
+            /* background-color: gray; */
+            /* gap:50px; */
+            grid-template-areas: 
+            "........."
+            "........."
+            "........."
+            "........."
+            "........."
+            "........."
+            "........."
+            "........."
+            "........."
+            ".........";
+        }
+        .A-C-0{grid-area:A-C-0;background-color: red;}
+        .A-H-0{grid-area:A-H-0;background-color: red;}
+        .A-E-0{grid-area:A-E-0;background-color: red;}
+        .A-Y-0{grid-area:A-Y-0;background-color: red;}
+        .A-K-0{grid-area:A-K-0;background-color: red;}
+        .A-Y-1{grid-area:A-Y-1;background-color: red;}
+        .A-E-1{grid-area:A-E-1;background-color: red;}
+        .A-H-1{grid-area:A-H-1;background-color: red;}
+        .A-C-1{grid-area:A-C-1;background-color: red;}
+        .A-G-0{grid-area:A-G-0;background-color: red;}
+        .A-G-1{grid-area:A-G-1;background-color: red;}
+        .A-S-0{grid-area:A-S-0;background-color: red;}
+        .A-S-1{grid-area:A-S-1;background-color: red;}
+        .A-S-2{grid-area:A-S-2;background-color: red;}
+        .A-S-3{grid-area:A-S-3;background-color: red;}
+        .A-S-4{grid-area:A-S-4;background-color: red;}
+        .B-C-0{grid-area:B-C-0;background-color: red;}
+        .B-H-0{grid-area:B-H-0;background-color: red;}
+        .B-E-0{grid-area:B-E-0;background-color: red;}
+        .B-Y-0{grid-area:B-Y-0;background-color: red;}
+        .B-K-0{grid-area:B-K-0;background-color: red;}
+        .B-Y-1{grid-area:B-Y-1;background-color: red;}
+        .B-E-1{grid-area:B-E-1;background-color: red;}
+        .B-H-1{grid-area:B-H-1;background-color: red;}
+        .B-C-1{grid-area:B-C-1;background-color: red;}
+        .B-G-0{grid-area:B-G-0;background-color: red;}
+        .B-G-1{grid-area:B-G-1;background-color: red;}
+        .B-S-0{grid-area:B-S-0;background-color: red;}
+        .B-S-1{grid-area:B-S-1;background-color: red;}
+        .B-S-2{grid-area:B-S-2;background-color: red;}
+        .B-S-3{grid-area:B-S-3;background-color: red;}
+        .B-S-4{grid-area:B-S-4;background-color: red;}
+
+    </style>
+    <style>
+        .chessContener{
+            background-color: gray;
+            width: 400px;
+            height: 400px;
+            /* display:flex; */
+            padding: 50px;
+        }
+    </style>
+    
+    <div class = "chessContener">
+        <div class="lego" id = "chessPlatform">
+            <div class = "A-C-0"></div>
+            <div class = "A-H-0"></div>
+            <div class = "A-E-0"></div>
+            <div class = "A-Y-0"></div>
+            <div class = "A-K-0"></div>
+            <div class = "A-Y-1"></div>
+            <div class = "A-E-1"></div>
+            <div class = "A-H-1"></div>
+            <div class = "A-C-1"></div>
+            <div class = "A-G-0"></div>
+            <div class = "A-G-1"></div>
+            <div class = "A-S-0"></div>
+            <div class = "A-S-1"></div>
+            <div class = "A-S-2"></div>
+            <div class = "A-S-3"></div>
+            <div class = "A-S-4"></div>
+            <div class = "B-C-0"></div>
+            <div class = "B-H-0"></div>
+            <div class = "B-E-0"></div>
+            <div class = "B-Y-0"></div>
+            <div class = "B-K-0"></div>
+            <div class = "B-Y-1"></div>
+            <div class = "B-E-1"></div>
+            <div class = "B-H-1"></div>
+            <div class = "B-C-1"></div>
+            <div class = "B-G-0"></div>
+            <div class = "B-G-1"></div>
+            <div class = "B-S-0"></div>
+            <div class = "B-S-1"></div>
+            <div class = "B-S-2"></div>
+            <div class = "B-S-3"></div>
+            <div class = "B-S-4"></div>
+        </div>
+    </div>
+</body>
+
+</html>
+<!-- ["A-C-0","A-H-0","A-E-0","A-Y-0","A-K-0","A-Y-1","A-E-1","A-H-1","A-C-1","A-G-0","A-G-1","A-S-0","A-S-1","A-S-2","A-S-3","A-S-4"]
+
+    
+["B-C-0","B-H-0","B-E-0","B-Y-0","B-K-0","B-Y-1","B-E-1","B-H-1","B-C-1","B-G-0","B-G-1","B-S-0","B-S-1","B-S-2","B-S-3","B-S-4"]
+
+["A-C-0","A-H-0","A-E-0","A-Y-0","A-K-0","A-Y-1","A-E-1","A-H-1","A-C-1","A-G-0","A-G-1","A-S-0","A-S-1","A-S-2","A-S-3","A-S-4","B-C-0","B-H-0","B-E-0","B-Y-0","B-K-0","B-Y-1","B-E-1","B-H-1","B-C-1","B-G-0","B-G-1","B-S-0","B-S-1","B-S-2","B-S-3","B-S-4"] -->

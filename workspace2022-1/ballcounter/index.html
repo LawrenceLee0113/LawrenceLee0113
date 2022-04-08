@@ -1,0 +1,391 @@
+<html>
+    <!DOCTYPE html>
+
+    <head>
+        <meta charset="UTF-8">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    </head>
+
+    <body>
+        <style>
+            .workspace {
+                width: 97vw;
+                height: 97vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+
+            }
+        </style>
+        <style>
+            .showArea {
+                width: 50%;
+                height: 50%;
+                background-color: rgb(255, 196, 0);
+                padding: 50px;
+
+                display: none;
+                /* display: flex;
+                        justify-content: space-around;
+                        align-items: center; */
+                /* flex-direction: column; */
+            }
+
+            .showMenu {
+                width: 100%;
+                height: 50px;
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+
+            }
+
+            .p1menu {
+                height: 50px;
+                width: 50px;
+                margin: 0px 10px 0px 10px;
+                background-color: gray;
+                border-radius: 50px;
+                color: rgb(0, 255, 13);
+                font-size: 16px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .p2menu {
+                height: 50px;
+                width: 50px;
+                margin: 0px 10px 0px 10px;
+                border-radius: 50px;
+                color: rgb(0, 255, 13);
+                font-size: 16px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: gray;
+            }
+
+            .allmenu {
+                height: 50px;
+                width: 50px;
+                margin: 0px 10px 0px 10px;
+                border-radius: 50px;
+                color: rgb(0, 255, 13);
+                font-size: 16px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: gray;
+            }
+
+            .show {
+                background-color: rebeccapurple;
+                width: 100%;
+                height: auto;
+
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            .p1menu-show {
+                display: none;
+                width: 100%;
+                height: auto;
+            }
+
+            .p2menu-show {
+                display: none;
+                width: 100%;
+                height: auto;
+            }
+
+            .allmenu-show {
+                display: none;
+                width: 100%;
+                height: auto;
+            }
+        </style>
+        <script>
+            function checkRoomNum() {
+                $.post("https://ballcounter.lawrencelee0113.repl.co/api/join", { "roomNum": roomNum },
+                    function (data, textStatus, jqXHR) {
+                        if (data.mode == "fail") {
+                            alert("沒有此房號！！")
+                            location.href="https://ballcounter.lawrencelee0113.repl.co/";
+
+                        } else {
+                            $(".showArea").show();
+                        }
+                    },
+                    "json"
+                );
+            }
+            function refleshData() {
+                $.post("https://ballcounter.lawrencelee0113.repl.co/api/join", {"roomNum":roomNum},
+                    function (data, textStatus, jqXHR) {
+                        if(data.mode == "su"){
+
+                            $("#p1-score-text").html(data.p1score);
+                            $("#p2-score-text").html(data.p2score);
+                        }else if(data.mode == "fail"){
+                            clearInterval(counting);
+
+                            alert("房號已被刪除！！")
+                            $(".showArea").hide();
+                            location.href="https://ballcounter.lawrencelee0113.repl.co/";
+                        }
+                    },
+                    "json"
+                );
+            }
+            var roomNum = "";
+            $(document).ready(function () {
+                roomNum = $("#roomNumText").html();
+                checkRoomNum();
+            });
+        </script>
+
+        <script>
+            var nowPage = "";
+            var counting;
+            function changeMenuStyle() {
+                var a = $(".showMenu").children("a").children("div")
+                $.each(a, function (i, v) {
+                    var b = $(v).attr("class");
+                    if (b == nowPage) {
+                        $(v).css("color", "purple");
+                        $(v).css("font-color", "26px");
+                        $("." + b + "-show").show();
+
+                    } else {
+                        $(v).css("color", "rgb(0, 255, 13)");
+                        $(v).css("font-color", "16px");
+                        $("." + b + "-show").hide();
+
+                    }
+                });
+
+                if(nowPage == "allmenu"){
+                    counting=setInterval(refleshData,1000);
+
+                }else{
+                    clearInterval(counting);
+                }
+
+
+            }
+            $(document).ready(function () {
+                $("a").click(function (e) {
+                    e.preventDefault();
+                    
+                    var pageName = $(this).children("div").attr("class");
+                    if(pageName=="delmenu"){
+                        if(confirm("是否刪除此房間")){
+                            $.ajax({
+                                type: "DELETE",
+                                url: "https://ballcounter.lawrencelee0113.repl.co/api/join",
+                                data: {"roomNum":roomNum},
+                                dataType: "json",
+                                success: function (response) {
+                                    if(response=="su"){
+                                        alert("房號已被刪除！！")
+                                        $(".showArea").hide();
+                                        location.href="https://ballcounter.lawrencelee0113.repl.co/";
+                                    }
+                                }
+                            });
+                        }
+                    }else{
+
+                        nowPage = pageName
+    
+                        changeMenuStyle();
+                    }
+                    
+                });
+            });
+
+
+            $(document).ready(function () {
+                $.get("/content/news", {},
+                    function (data, textStatus, jqXHR) {
+                        console.log(data)
+                    },
+                    "html"
+                );
+            });
+        </script>
+        <style>
+            .delmenu{
+                height: 50px;
+                width: 50px;
+                margin: 0px 10px 0px 10px;
+                border-radius: 50px;
+                color: rgb(0, 255, 13);
+                font-size: 16px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: gray;
+                position:absolute;
+                top:0px;
+                right: 0px;
+            }
+        </style>
+        <div class="workspace">
+
+            <div class="showArea">
+                <div class="showMenu">
+                    <a href="">
+                        <div class="p1menu">
+                            1
+                        </div>
+
+                    </a>
+                    <a href="">
+
+                        <div class="p2menu">
+                            2
+                        </div>
+                    </a>
+                    <a href="">
+
+                        <div class="allmenu">
+                            A
+                        </div>
+                    </a>
+                    roomNum：<div id="roomNumText">{{roomNum}}</div>
+                    
+
+                        <a href="">
+                            <div class="delmenu">
+                                刪
+                            </div>
+                        </a>
+                </div>
+                <style>
+                    #p1-add {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        height: 300px;
+                        background-color: purple;
+                    }
+
+                    #p2-add {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        height: 300px;
+                        background-color: purple;
+                    }
+
+                    #all-show-area {
+                        width: 100%;
+                        height: 100%;
+                        /* background-color: black; */
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+
+                    }
+
+                    #p1-score-broad,
+                    #p2-score-broad {
+                        width: 30%;
+                        height: 50%;
+                        background-color: aliceblue;
+                        display:flex;
+                        justify-content: space-around;
+                        flex-direction: column;
+                        align-items: center;
+
+                    }
+                    #p1-score-text,#p2-score-text{
+                        font-size: 50px;
+                        color: red;
+                        
+                    }
+
+                    /* .p1menu-show,.p2menu-show,.allmenu-show{
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                } */
+                </style>
+                <script>
+                    $(document).ready(function () {
+                        $("#p1-add").click(function (e) { 
+                            e.preventDefault();
+                            $.post("https://ballcounter.lawrencelee0113.repl.co/room/"+roomNum, {"player":"p1"},
+                                function (data, textStatus, jqXHR) {
+                                    alert(data)
+                                },
+                                "json"
+                            );
+                            
+                        });
+                        $("#p2-add").click(function (e) { 
+                            e.preventDefault();
+                            $.post("https://ballcounter.lawrencelee0113.repl.co/room/"+roomNum, {"player":"p2"},
+                                function (data, textStatus, jqXHR) {
+                                    alert(data)
+                                },
+                                "json"
+                            );
+                        });
+                        // $("#allmenu-show").click(function (e) { 
+                        //     e.preventDefault();
+
+
+                            
+                        // });
+                    });
+                </script>
+                <div class="show">
+                    <div class="p1menu-show">
+                        <div id="p1-add">
+                            P1 加一分
+                        </div>
+                    </div>
+                    <div class="p2menu-show">
+                        <div id="p2-add">
+                            P2 加一分
+                        </div>
+                    </div>
+                    <div class="allmenu-show">
+                        <div id="all-show-area">
+                            <div id="p1-score-broad">
+                                <h1>P1 score</h1>
+                                <div id="p1-score-text">
+                                    0
+                                </div>
+
+                            </div>
+                            <div id="p2-score-broad">
+                                <h1>P2 score</h1>
+                                <div id="p2-score-text">
+                                    0
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <!-- setInterval(refleshData,1000) -->
+
+            </div>
+        </div>
+    </body>
+
+    </html>

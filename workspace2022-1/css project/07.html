@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05page rwd testing</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+        }
+        .item .pic img{
+            width: 100%;
+            
+        }
+        .title h2{
+            text-align: center;
+            font-size: 46px;
+        }
+        .title p{
+            font-size: 20px;
+            text-align: center;
+        }
+        .title{
+            margin: 0 0px 20px;
+            background-color: #ccc;
+            padding: 30px 10px;
+            width: 100%;
+
+        }
+        /* .item-group{
+            display: flex;
+        } */
+        .item{
+            margin: 0 10px 20px;
+        }
+        .banner img{
+            width: 100%;
+
+        }
+        .footer{
+            background-color: #333;
+            color: #aaaa;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .about .item .text h3{
+            font-size: 24px;
+            text-align: center;
+            margin: auto;
+        }
+        .wrap{
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+        }
+        img{
+            vertical-align: bottom;
+        }
+        .service{
+            padding: 60px 0;
+            background-color: #ffa;
+        }
+        @media screen and (min-width: 768px){
+            .item-group{
+                display: flex;
+            }
+            .service .item{
+                width: 100%;
+                display: flex;
+            }
+            .service .item .pic,
+            .service .item .text{
+                width: 100%;
+                margin: 0;
+                
+            }
+            .service .item .text{
+                display: flex;
+                padding: 0 20px;
+                box-sizing: border-box;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+    </style>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+        }
+        #menu_control{
+            position: absolute;
+            /* z-index: 2; */
+            opacity: 0;
+        }
+        .header{
+            background-color: #ccc;
+            height: 50px;
+            position: relative;
+        }
+        .logo img{
+            vertical-align: middle;
+            width: 60px;
+            height: 40px;
+            display: block;
+        }
+        .menu_btn{
+            width: 40px;
+            height: 40px;
+            background-color: #000;
+            display: block;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+
+        }
+        .menu_btn span{
+            opacity: 0;
+            color: white;
+            width: 1px;
+            height: 1px;
+            display: block;
+            overflow: hidden;
+        
+        }
+        .menu_btn::before{
+            content:"";
+            position: absolute;
+            height: 2px;
+            width: 36px;
+            left: 2px;
+            background-color: #aaa;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            box-shadow: 0 8px 0 #aaa,0 -8px 0 #aaa;
+        }
+        nav{
+            width: 80%;
+            height: calc(100vh - 50px);
+            background-color: #fcc;
+            position: fixed;
+            left: -100%;top: 50px;
+            transition: 0.5s;
+        }
+        nav a{
+            display: block;
+            color: white;
+            padding: 10px 20px;
+            border-bottom: 1px solid white;
+        }
+        #menu_control:checked ~ .header nav{
+            left: 0px;
+        }
+        @media screen and (min-width: 768px){
+            .menu_btn{
+                display: none;
+            }
+            .header{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .logo{
+                top: 0;
+            }
+            nav{
+                display: flex;
+                position: relative;
+                left: 0;
+                width: auto;
+                height: auto;
+                top: 0;
+                background-color: transparent;
+            }
+            nav a{
+                border-bottom: none;
+
+            }
+
+        }
+    </style>
+</head>
+<body>
+    
+    <input type="checkbox" id="menu_control">
+
+    <div class="header">
+        <h1 class="logo">
+            <a href="#">
+                <img src="https://picsum.photos/60/40/?random=1">
+            </a>
+
+        </h1>
+        <label for="menu_control" class="menu_btn">
+            <span>選單</span>
+            
+        </label>
+        <nav>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+
+        </nav>
+    </div>
+    <div class="banner">
+        <img src="https://fakeimg.pl/1400x500/">
+    </div>
+    
+    <div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h2>關於我們</h2>
+                <p>Lorem, ipsum dolor sitamet consectetur adipisicing elit. Aut illo placeat provident hic omnis. Consequuntur nisi et amet, iusto quam blanditiis odit? Porro odit nam, nobis earum vitae dicta at.</p>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic"><img src="https://fakeimg.pl/300x200/" alt=""></div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem minima laudantium impedit expedita soluta eaque praesentium iure qui tenetur vitae totam, error enim! Nihil quidem sapiente fuga fugiat, odit magnam?</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic"><img src="https://fakeimg.pl/300x200/" alt=""></div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem minima laudantium impedit expedita soluta eaque praesentium iure qui tenetur vitae totam, error enim! Nihil quidem sapiente fuga fugiat, odit magnam?</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic"><img src="https://fakeimg.pl/300x200/" alt=""></div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem minima laudantium impedit expedita soluta eaque praesentium iure qui tenetur vitae totam, error enim! Nihil quidem sapiente fuga fugiat, odit magnam?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="service">
+        <div class="wrap">
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic"><img src="https://fakeimg.pl/300x200/" alt=""></div>
+                    <div class="text"><h3>title here</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, aliquam?</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h2>關於我們</h2>
+                <p>Lorem, ipsum dolor sitamet consectetur adipisicing elit. Aut illo placeat provident hic omnis. Consequuntur nisi et amet, iusto quam blanditiis odit? Porro odit nam, nobis earum vitae dicta at.</p>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic"><img src="https://fakeimg.pl/300x200/" alt=""></div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem minima laudantium impedit expedita soluta eaque praesentium iure qui tenetur vitae totam, error enim! Nihil quidem sapiente fuga fugiat, odit magnam?</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic"><img src="https://fakeimg.pl/300x200/" alt=""></div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem minima laudantium impedit expedita soluta eaque praesentium iure qui tenetur vitae totam, error enim! Nihil quidem sapiente fuga fugiat, odit magnam?</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic"><img src="https://fakeimg.pl/300x200/" alt=""></div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem minima laudantium impedit expedita soluta eaque praesentium iure qui tenetur vitae totam, error enim! Nihil quidem sapiente fuga fugiat, odit magnam?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        design by lawlaw777
+    </div>
+</body>
+</html>

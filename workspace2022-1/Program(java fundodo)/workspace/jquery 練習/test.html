@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js">
+</script>
+</head>
+
+<body>
+<label id = "changePColor">把p元素變七彩byjquery</label>
+</p>
+<p>123456789</p>
+<p>qeryui</p>
+<p>987564321</p>
+    <script>
+        var i = 0;
+       $("#changePColor").click(function(){
+           let colors = ["red","orange","yellow","green","skyblue","blue","purple"];
+           $("p").css("color",colors[i]);
+           if(i == 6){
+            i = 0;
+           }else{
+           i++;
+           }
+
+       })
+        
+    </script>
+<hr>
+<input type = "text" placeholder = "請輸入要消失的lab(用逗號,區隔)" id = "input1"><label id = "start1">開始</label><label id = cancel>返回</label>
+</p>
+<label id = "lab1">lab1</label><br>
+<label id = "lab2">lab2</label><br>
+<label id = "lab3">lab3</label><br>
+<label id = "lab4">lab4</label><br>
+<label id = "lab5">lab5</label><br>
+<script>
+    $("#start1").click(function(){
+        let arrStr = $("#input1").val();
+        let arr = arrStr.split(",");
+        for (let i of arr){
+            var id = "#" + i1;
+            $(id).hide();
+        }
+    })
+    $("#cancel").click(function(){
+        $("#lab1,#lab2,#lab3,#lab4,#lab5").show();
+    })
+</script>
+<hr>
+<label id = "lab11">type = text .val = succeed</label> <br>
+<label id = "lab12">type = text and name = type2 .val = succeed</label> <br>
+<label id = "lab13">val = 1law3 = succeed</label> <br>
+<label id = "lab14">input.val = succeed</label> <br>
+<label id = "lab15">format</label> <br>
+
+<input type = "text" name = "type1" value = "1law3">
+<input type = "text" name = "type2" value = "1law3">
+<input type = "button" name = "type1"value = "3wal1">
+<input type = "button" name = "type2"value = "3wal1">
+<script>
+    $("#lab11").click(function(){
+        $("input[type = text]").val("succeed");
+    })
+    $("#lab15").click(function(){
+        $("input[type = text]").val("1law3");
+        $("input[type = button]").val("3wal1");
+    })
+    $("#lab12").click(function(){
+        $("input[type = text][name = type2]").val("succeed");
+    })
+    $("#lab13").click(function(){
+        $("input[value = 3wal1]").val("succeed");
+    })
+    $("#lab14").click(function(){
+
+        $(":input").val("succeed");
+    })
+</script>
+<hr>
+<label id = "aaa">這是基準點1</label>
+<script>
+$("#aaa").before("<p>在外面的之前</p>")
+</script>
+</p>
+<hr>    
+<label id = "bbb">這是基準點2</label>
+<script>
+$("#bbb").after("<p>在外面的之後</p>")
+</script>
+</p>
+<hr>    
+<label id = "ccc">這是基準點3</label>
+<script>
+$("#ccc").prepend("<p>在裡面的前面</p>")
+</script>
+</p>
+<hr>    
+<label id = "ddd">這是基準點4</label>
+<script>
+$("#ddd").append("<p>在裡面的後面</p>")
+</script>
+</p>
+<hr>    
+可按F12查看。
+<hr>
+<hr>
+<img src = "image/300px-外婆.png" id = "img" width="300" height="648">
+<br>
+<p>原本寬為： <label id = "firstWeight"></label> 原本長為： <label id = "firstHeight"></label></p>
+<input placeholder="請輸入寬" id = "inputWeight">
+<input placeholder="請輸入長" id = "inputHeight">
+<button id = "start2">開始</button>
+
+<script>
+    $("#firstWeight").html($("#img").attr("width"));
+    $("#firstHeight").html($("#img").attr("height"));
+    $("#start2").click(function (){
+        let weight = $("#inputWeight").val();
+        let height = $("#inputHeight").val();
+        $("#img").attr("width",weight);
+        $("#img").attr("height",height);
+    })
+</script>
+<hr>
+<label id = "ppp" title = "no title">這是一行文字</label>
+<button id = "button1">開始</button>
+<script>
+    $("#button1").click(function(){
+        $("#ppp").attr("title","I changed the title by attr")
+    })
+</script>
+<hr>
+
+</body>
+</html>

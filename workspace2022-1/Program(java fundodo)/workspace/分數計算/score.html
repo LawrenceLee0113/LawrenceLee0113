@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src = "https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src = "score.js"></script>
+    </head>
+    <body>
+        <h1>當天分數計算表</h1>
+        <hr>
+        <div id = "time">
+            <label for= "tatalTime">共有幾小時</label>
+            <input type="text" id = "totalTime" value="15.5"><br>
+            <label for = "recordTime">有幾個小時不合理的行動</label>
+            <input type="text" id = "recordTime"><br>
+            <h3>例外</h3>
+            <label for = "familyTime">被家人妨礙時間數</label>
+            <input type="text" id = "familyTime"><br>
+            <label for = "playgame">玩遊戲數(看劇、看yt)</label>
+            <input type="text" id = "playgame"><br>
+
+            <hr>
+        </div>
+        <div id = "event">
+            <label for = "totalEvent">共有幾個活動</label>
+            <input type = "text" id = "totalEvent"><br>
+            <label>10分的有幾個</label>
+            <input type = "text" id = "tenEvent"><br>
+            <label>8分的有幾個</label>
+            <input type = "text" id = "eightEvent"><br>
+            <label>6分的有幾個</label>
+            <input type = "text" id = "sixEvent"><br>
+            <label>4分的有幾個</label>
+            <input type = "text" id = "fourEvent"><br>
+            <label>2分的有幾個</label>
+            <input type = "text" id = "twoEvent"><br>
+            <label>0分的有幾個</label>
+            <input type = "text" id = "zeroEvent"><br>
+            <br>
+            <h3>加分項目</h3>
+            <label for="amount">完成指派任務數</label>
+            <input type = "text" id = "amount"><br>
+            <label for = "break">結束後休息數(every hour)(喝水、廁所、紀錄)</label>
+            <input type="text" id = "break">
+            <hr>
+        </div>
+        <div id = "tatalscore">
+            <button id = "count">開始計算</button>
+            <br>
+            <h3>時間 活動 加權比</h3>
+            <label for = "timew"></label>
+            <input id = "timew" value = "1"><br>
+            <label for = "eventw"></label>
+            <input id = "eventw" value = "1"><br>
+            
+            <p id = "scorePaper"></p>
+        </div>
+    </body>
+</html>

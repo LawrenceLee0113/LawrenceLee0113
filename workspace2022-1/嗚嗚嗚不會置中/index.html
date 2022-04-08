@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>聖誕交換禮物抽籤</title>
+    <link href="styles.css" rel="stylesheet">
+    <!-- <link href="testStyle.css" rel="stylesheet"> -->
+    <!-- <audio src="pekopeko.mp3" autoplay="autoplay" loop="loop" preload="auto"></audio> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script/randomjava.js"></script>
+    <script src = "script/changeStyle.js"></script>
+    <audio id = "getPoint">
+        <source src = "hrxz.com-stfs5vcbedj51407.mp3" type = "audio/mpeg">
+    </audio>
+    <audio controls autoplay loop>
+        <!-- <audio id = "bgMusic"> -->
+        <source src = "bgMusic2.mp3" type = "audio/mpeg">
+
+    </audio>
+    <!-- <script>
+        function playBgMusic(){
+            
+        }
+    </script> -->
+
+</head>
+
+<body>
+    <div class="header">
+        <!-- <div class="leftPosition">
+            <button id="settingBtn">
+                <img src = "settingBtn1.png" style="height: 100%;width: 100%;">
+                
+            </button>
+        </div> -->
+    </div>
+    <div class="random-grid">
+        <div class="inputBoxHeader">
+            <div class = "btnCenter">
+
+                <img src="image/giftImage.png" alt="icon" style="height:50px;width:50px;" id = "icons">
+            </div>
+            <!-- <img src="66f523e5c7135f9d-removebg-preview.png" alt="狂三好可愛" style="height:50px;width:50px;">
+            <img src="66f523e5c7135f9d-removebg-preview.png" alt="狂三好可愛" style="height:50px;width:50px;"> -->
+            <div style="text-align:center;" id = "headTitle">參加人數</div>
+
+        </div>
+        <div class="content">
+            <div id="adminInputBox" style="display: block;">
+                <div class = "btnCenter">
+
+                    <input type="text" placeholder="輸入參加人數" id="signInAmountInput"/>
+                </div>
+                <br>
+                <div class="btnCenter">
+                    <button id="ready" class = "clickBtn">確定</button>
+                </div>
+                
+                
+            </div>
+            <div id="userInputBox" style="display: none;width: 100%;height: 100%;">
+                <div class="btnCenter">
+
+                    <button id="start" class = "clickBtn">抽!!</button>
+                    <button id="restart" class = "clickBtn">重抽</button>
+                </div>
+                <div id="outputBox"  class="text">
+                    你的號碼：<div id = "outputNum"></div>
+                </div>
+
+                <!-- <div class = "replay" style = "font-size: 10px;color:red;
+                position: absolute;
+                bottom: 10px;
+                border: 3px solid #8AC007;
+                ">reset</div> -->
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>庭愷設計的班網</title>
+    <style>
+        
+
+        :root {
+            --headHeight: 60px;
+            --contentWidth: 1000px;
+        }
+        /* @media(min-width: 900px) {
+
+        :root {
+                --headHeight: 150px;
+                --contentWidth: auto;
+            }
+        } */
+        
+
+        /* @media(max-width: 900px) {
+
+            :root {
+                --headHeight: 200px;
+                --contentWidth: 50px;
+            }
+        } */
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/headStyle.css">
+    <link rel="stylesheet" href="css/contentStyle.css">
+    <link rel="stylesheet" href="css/menuStyle.css">
+    <link rel="stylesheet" href="css/iconStyle.css">
+
+    <link rel="short icon" href="image/logo.jpg">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <!--icon script-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--icon script-->
+
+    <!-- <script src="outputMenuIcon.js"></script> -->
+    <script src="changeColor.js"></script>
+</head>
+
+<body>
+    <div class="head">
+        <div class="iconArea">
+            <div class="menu-btn-position">
+                <div class="menu-btn" id="menu-btn">
+                    <div class="menu-btn-content">
+                        <a href="">
+                            <!-- <hr style="border: 1px solid white;margin-top:10px">
+                        <hr style="border: 1px solid white;">
+                        <hr style="border: 1px solid white;"> -->
+                            <ion-icon name="menu-sharp" id="menu-btn-icon"></ion-icon>
+                        </a>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div class="logo-icon">
+
+                <img src="image/nutc-logo.png" alt="logo">
+            </div>
+            <div class="title-icon">
+                <img src="image/bdb4eda31297411f92249806fc4fafa4.PNG" alt="logo">
+                <!-- <img src="image/bdb4eda31297411f92249806fc4fafa4.PNG" alt="logo"> -->
+            </div>
+        </div>
+        <div class="short-menu">
+            <ul style="display: flex;">
+                <li id="short-menu-icon-li">
+                    <ion-icon name="color-wand-sharp" id="short-menu-icon"></ion-icon>
+                </li>
+                <li><a href="https://www.nutc.edu.tw/bin/home.php" target="_blank"> 中科大校網</a></li>
+                <li><a href="https://sso.nutc.edu.tw/ePortal/" target="_blank"> eportal</a></li>
+                <li><a href="https://www.instagram.com/lawrencelee666/" target="_blank"> 班代IG</a></li>
+                <li><a href="https://www.instagram.com/ntcust_csie_jar/" target="_blank">追蹤IG</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- <div class="headBr">
+    </div> -->
+
+    <!--menu content-->
+
+    <div class="side-menu-btn">
+
+    </div>
+    <div class="menu">
+        <div class="menu-content">
+
+            <!--
+                    "首頁",
+                    "公告消息",
+                    "班級課表",
+                    "個網站資源整理",
+                    "班級資料",
+                    行事曆
+                    "其他"
+                    
+                    回憶專區
+                    公告消息 (班級活動 校內活動: 活動資訊)
+                    幹部名單
+                    班級成員
+                    作品分享
+                -->
+
+
+            <!--menu item header from here-->
+            <div class="menu-content-item">
+                <a href="home.html">
+                    <div class="menu-content-item-padding">
+                        <div class="menu-content-item-icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </div>
+                        <div class="menu-content-item-text">
+                            <h1>
+                                首頁
+                            </h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="menu-content-item">
+                <a href="news.html">
+                    <div class="menu-content-item-padding">
+                        <div class="menu-content-item-icon">
+                            <ion-icon name="megaphone-outline"></ion-icon>
+                        </div>
+                        <div class="menu-content-item-text">
+                            <h1>
+                                公告消息
+                            </h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="menu-content-item">
+                <a href="curriculum.html">
+                    <div class="menu-content-item-padding">
+                        <div class="menu-content-item-icon">
+                            <ion-icon name="clipboard-outline"></ion-icon>
+                        </div>
+                        <div class="menu-content-item-text">
+                            <h1>
+                                班級課表
+                            </h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="menu-content-item">
+                <a href="resourseLink.html">
+                    <div class="menu-content-item-padding">
+                        <div class="menu-content-item-icon">
+                            <ion-icon name="document-attach-outline"></ion-icon>
+                        </div>
+                        <div class="menu-content-item-text">
+                            <h1>
+                                資源整理
+                            </h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="menu-content-item">
+                <a href="classData.html">
+                    <div class="menu-content-item-padding">
+                        <div class="menu-content-item-icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </div>
+                        <div class="menu-content-item-text">
+                            <h1>
+                                班級資料
+                            </h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="menu-content-item">
+                <a href="calendar.html">
+                    <div class="menu-content-item-padding">
+                        <div class="menu-content-item-icon">
+                            <ion-icon name="calendar-clear-outline"></ion-icon>
+                        </div>
+                        <div class="menu-content-item-text">
+                            <h1>
+                                行事曆
+                            </h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="menu-content-item">
+                <a href="other.html">
+                    <div class="menu-content-item-padding">
+                        <div class="menu-content-item-icon">
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </div>
+                        <div class="menu-content-item-text">
+                            <h1>
+                                其他
+                            </h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!--menu item footer to here-->
+            <!-- <input type = "color" id = "colorSelecter"> -->
+
+
+        </div>
+
+
+
+    </div>
+    <div class="content">
+        <div class="contentText">
+            <!-- <div class="iframe-content">
+                <iframe src="test.html" width="80%"  scrolling="no" frameborder="0"
+                    id="contentIframe">no iframe</iframe>
+                    <script>
+                        $(function(){
+                            function receiveMessageFromIframePage (event) {
+                                var height = ('receiveMessageFromIframePage',event.data.h);
+                                console.log(height);//接收source.html頁面所回傳的高度值
+                                $('#contentIframe').height(height);//將取得的高度，變更myIframe高度
+                        
+                            }
+                            window.addEventListener("message", receiveMessageFromIframePage, false);//監聽receiveMessageFromIframePage
+                        });
+                        </script>
+            
+            
+            </div> -->
+            <div id="testText">
+                帶回家的訊息：REST 真的很難懂
+                2019/4/16 更新：新增了「一些常見名詞」段落。
+                必須說，REST 真的是個有點抽象的概念，所以如果你看完這篇還是沒有懂，絕對不是你的錯，請來告訴我讓我好好反省。
+                本篇文章會介紹
+                1. REST 定義
+                2. REST 特色
+                3. REST 元素
+                4. 一些常見名詞
+                5. 其它架構方法
+                一、REST 定義
+                REST (REpresentational State Transfer) 是一種網頁服務架構（Web Service Architecture）方法，提供電腦系統一種標準化溝通的管道。
+                聽起來有點抽象。直接舉例： HTTP 就是一個符合 REST 架構的實作。但是要記得，REST 是一種風格，所以應用程式使用了 HTTP 連線不保證它就是 REST 架構。
+                REST 雖然是個來自 WWW 的架構概念 (比 WWW 晚)，但是這兩者並不是綁在一起，有可能設計一個大型軟體系統符合 REST 但是不用 HTTP 協定也不需跟 WWW 互動，也有可能設計一個簡單的
+                XML+HTTP 界面使用 RPC model 而不符合 REST principles。
+                擷取自 ihower。
+                二、REST 特色
+                符合 REST 原則的系統就是 RESTful（或是 REST-compliant）。RESTful systems 有五個主要特性/限制：伺服器/客戶端分離、無狀態、可快取、分層、統一操作介面。
+                伺服器/客戶端分離 Separation of Server and Client
+                遵照 REST
+                設計的系統可以做到伺服器端與客戶端的實作獨立，兩者可以各自發展、互不影響，也就是說不管客戶端的程式碼再怎麼改變都不會影響到伺服器的運作，反之亦然。這是因為兩者遵循著一個溝通的格式，只要客戶端不改變傳訊息給伺服器端的方式，伺服器端也不改變傳訊息給客戶端的方式，就可以做到
+                seperation of concerns。
+                無狀態 Stateless
+                每個請求都是獨立的、自成一個個體，與前後請求無關。如此好處有很多，包含可靠（容易從錯誤中復原）、高效能與可擴充性（可以將請求交給不同伺服器處理），而元件可以被修改、更動而不會影響到系統整體的運作。
+                可快取 Cacheable
+                快取機制可以在 Client 或 Server 中實作。
+                分層 Layered
+                在發出請求的 Client 與送出回應的 Server 之間可以有好幾個 Server 中間人（稱作 Connectors，下面介紹），彼此獨立並且不會影響到 Request 與 Response。
+                統一操作介面 Uniform Interface
+                將操作細節抽象出來，降低耦合並提高獨立性。
+                這些特性是讓 REST 強大的原因，讓我們繼續看下去它是如何辦到的。
+                三、REST 元素
+                REST 有三個主要角色：Data Elements, Connectors, Components.
+                Data Elements
+                Resource 與 Representation 是兩個 Data Elements 中比較重要的元素。
+                我們可以把 Resource 想像成一個物件的高級說法（其實也差不多是這樣）。若是熟悉物件導向程式設計（Object-Oriented Programming），Resource 的概念也可以用 OOP
+                中的物件來聯想。它有自己的類型、關聯的資料、可以被我們存取與傳送。
+                每個 Resource 有自己的 Resource Identifier 與 Resource Metadata。Resource Identifier 是什麼？在前面加個
+                Uniform，再看看它的縮寫—沒錯！就是 URI (Uniform Resource Identifier)。雖然我們比較常聽到的是 URL (Uniform Resource Locator)，URI
+                可能比較陌生，但是兩者的概念是一樣的，都是一種識別資源的方法，而 URL 是 URI 的一種，有興趣暸解兩者關係的可以看這篇 SO 回答。
+                Resource Metadata 則是儲存 Source Link, Alternates 等資訊。
+                Representation 是表示這個資源目前的狀態，Content-Type (e.g. application/html, image/jpg) 就是一種
+                Representation。Representation Metadata 則包含了 Media Type, Last-Modified Time 等資料。
+                Connectors
+                REST connectors 包含五種型態：Client, Server, Cache, Resolver, Tunnel。其中 Client 與 Server
+                是兩種主要型態。一次請求到回應的路徑是：Server 監聽 → Client 發出 Request → Server 收到 → 傳回 Response。 Cache 的機制則可以實做在 Client 端或是
+                Server 端。Resolver 的角色像是 Client 與 Server 的中間人（e.g. DNS lookup），Tunnel 則可以做強制加密等工作。
+                Components
+                REST components 包含四種角色：User Agent, Origin Server, Gateway, Proxy。User Agent 就是有時候當我們要用爬蟲，會必須要註明
+                User-Agent = “Mozilla/5.0” 的那個 User Agent（題外話，這篇文章很幽默的解釋了 Mozilla/5.0 的由來。）User Agent 代表瀏覽器那一方，Origin
+                Server 則代表伺服器那一方。Gateway 與 Proxy 則是在 User Agent 與 Origin Server 的溝通過程中確保效率與安全性。
+                三個角色間的互動
+                請求流向：
+                User-Agent (component) → (requests a representation of a resource’s state)→ Client (connector) → Server
+                (connector) → Origin Server (component) → (sends back the response) → … → User-Agent
+                Components 使用 Connectors，透過一個標準化介面來操作 Data Elements。
+                中間可以穿插任意數量的 Connectors，但是每一層都是獨立的。
+                Data Elements 的操作不會從 Resource 本身，而是 Representation (the Representational part in REST) (e.g. HTML, XML,
+                JPG)。Applications 只需要知道 Representation 與 Action (要對資源做的動作) 就夠了。
+                標準化介面
+                REST 介面有三要素：名詞 Noun、動詞 Verb、表徵 Content Type。
+                Noun 就是要操作的 Resource，像是 https://jennycodes.me。
+                Verb 是一組有限的操作指令，包含 GET、POST、PUT、DELETE。
+                Content Type 是一組有限的內容格式，也就是 Representation，像是 HTML。
+                四、一些常見名詞
+                Base-url, Endpoint, Parameter 是幾個 REST API 常見的名詞，先解釋一下：
+                Base-url
+                一次 API 請求的基本盤。假設今天去餐廳外帶餐點，那 base-url 就是那家餐廳的外賣窗口，所有你想在這家餐廳點的菜都從這裡開始。
+                Endpoint
+                請求的資源本身。同樣以去餐廳外帶做比喻， endpoint 就是你要點的菜。
+                Parameters
+                你的客製化選項。比如說大辣小辣、要不要付餐具、哪個日期區間的資料 etc. 記得，這些選項必須是 API 提供者有提供的，比如說你不能要求「加香菜」到你的蛋炒飯如果店家沒有這個選項。所以記得好好閱讀 API
+                文件。
+                五、其它架構方法
+                以前最常被用來與 REST 比較的架構方法是 RPC，現在大概是 GraphQL。這篇先介紹 RPC，下一篇介紹 GraphQL
+                RPC: Remote Procedure Call
+                RPC 定義上來說是一個電腦程式（computer program）讓一個程序（procedure）在另一個記憶體位置（address space）（通常就是在另一台電腦或網路上）執行。同樣使用
+                Client-Server interaction。RPC 實作上有 SOAP 與 XML-RPC。RPC 與 REST 最大的不同是，在 Client
+                與物件溝通之前，它必須先擁有這個物件的知識才能進行操作。相反地，REST 則是只要知道物件的狀態就好了。多數人擁抱 REST 的原因是因為它簡單又很有威力，但同樣也因其簡單而讓人感到侷限。
+                總而言之，就跟世界上千千萬萬個選擇一樣：挑個當下最適合自己的就好了。
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

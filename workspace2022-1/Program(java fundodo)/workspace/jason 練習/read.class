@@ -1,0 +1,55 @@
+class read {
+
+    public static void main(String[] args) {
+        public class test {
+            public static void main(String[] args) {
+                ArrayList<String> list = new ArrayList<String>(); 
+                list.add("admin");
+                //讀取json檔案
+                try {
+                    BufferedReader br = new BufferedReader(new FileReader("test1.json"));
+                    BufferedWriter bw=new BufferedWriter(new FileWriter("newFile.json"));
+                    String str=null;
+                    String data="";
+                    while((str=br.readLine())!=null) {
+                        data=data+str+"\n";
+                    }
+                    JSONObject dataJson = new JSONObject(data);
+                    JSONArray features=dataJson.getJSONArray("features");
+                    for (int i = 0; i < features.length(); i++) {  
+                        JSONObject info = features.getJSONObject(i);// 獲取features陣列的第i個json物件  
+                        JSONObject properties = info.getJSONObject("properties");// 找到properties的json物件  
+                        String name = properties.getString("name");// 讀取properties物件裡的name欄位值  
+                        System.out.println(name);  
+                        properties.put("NAMEID", list.get(i));// 新增NAMEID欄位  
+                        // properties.append("name", list.get(i));  
+                        System.out.println(properties.getString("NAMEID"));  
+                        properties.remove("ISO");// 刪除ISO欄位 
+                        String ws=dataJson.toString();
+                        System.out.println(ws);
+                        bw.write(ws);  
+                        // bw.newLine();  
+                        bw.flush();  
+                        br.close();  
+                        bw.close();
+                    }
+                } catch (FileNotFoundException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }// 讀取原始json檔案 
+         catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                } catch (JSONException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }    
+            }
+        
+        }
+
+
+      }
+    
+
+}

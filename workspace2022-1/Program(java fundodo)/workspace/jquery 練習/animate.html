@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+        <script src = "script/animate.js"></script>
+    </head>
+    <body>
+        <script>
+        $(document).ready(function(){
+            $("#right").click(function(){
+              $("div").animate({left: '+=250px'});
+            });
+            $("#disapear").click(function(){
+              $("div").animate({opacity: '-=0.1'});
+            });
+            $("#left").click(function(){
+              $("div").animate({left: '-=250px'});
+            });
+            $("#apear").click(function(){
+              $("div").animate({opacity: '+=0.1'});
+            });
+            $("#long").click(function () { 
+              $("div").animate({height: "+=100px"})              
+            });
+            $("#fat").click(function () { 
+              $("div").animate({width: "+=100px"})              
+            });
+            $("#lenToggle").click(function () { 
+              $("div").animate({height: "toggle"})
+            });
+            $("#weiToggle").click(function () { 
+              
+              $("div").animate({width: "toggle"})
+            });
+            $("#stop").click(function () { 
+              $("div").stop();
+
+            });
+            $("#hide").click(function(){
+              $("div").hide("slow",function(){
+                alert("asdfjkl;adsfjkl;;")
+              })
+            })
+          });
+          </script> 
+          </head>
+          <body>
+          
+          <button id = "right">▶</button>
+          <button id = "left">◀</button>
+          <button id = "disapear">disapear</button>
+          <button id = "apear">apear</button>
+          <button id = "long">long</button>
+          <button id = "fat">fat</button>
+          <button id = "lenToggle">lenToggle</button>
+          <button id = "weiToggle">weiToggle</button>
+          <button id = "stop">animate stpe</button>
+          <button id = "hide">hide and function</button>
+
+<div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>  
+    </body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>象棋by庭愷</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src = "script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="chessUI.js"></script>
+</head>
+
+<body>
+    
+    
+    <style>
+        
+        .A-C-0{grid-area:A-C-0;background: url("chesses/B-C.svg");background-size: 100% 100%;color:black;text-align: center;font-size: 25px;border-radius: 30px;border:black solid 0px}
+        .A-H-0{grid-area:A-H-0;background: url("chesses/B-H.svg");background-size: 100% 100%;color:black;text-align: center;font-size: 25px;border-radius: 30px;border:black solid 0px}
+        .A-E-0{grid-area:A-E-0;background: url("chesses/B-E.svg");background-size: 100% 100%;color:black;text-align: center;font-size: 25px;border-radius: 30px;border:black solid 0px}
+        .A-Y-0{grid-area:A-Y-0;background: url("chesses/B-Y.svg");background-size: 100% 100%;color:black;text-align: center;font-size: 25px;border-radius: 30px;border:black solid 0px}
+        .A-K-0{grid-area:A-K-0;background: url("chesses/B-K.svg");background-size: 100% 100%;color:black;text-align: center;font-size: 25px;border-radius: 30px;border:black solid 0px}
+        .A-Y-1{grid-area:A-Y-1;background: url("chesses/B-Y.svg");background-size: 100% 100%;color:black;text-align: center;font-size: 25px;border-radius: 30px;border:black solid 0px}
+        .A-E-1{grid-area:A-E-1;background: url("chesses/B-E.svg");background-size: 100% 100%;color:black;text-align: center;font-size: 25px;border-radius: 30px;border:black solid 0px}
+        .A-H-1{grid-area:A-H-1;background: url("chesses/B-H.svg");background-size: 100% 100%;color:black;text-align: center;font-size: 25px;border-radius: 30px;border:black solid 0px}
+        .A-C-1{grid-area:A-C-1;background: url("chesses/B-C.svg");background-size: 100% 100%;color:black;text-align: center;font-size: 25px;border-radius: 30px;border:black solid 0px}
+        .A-G-0{grid-area:A-G-0;background: url("chesses/B-G.svg");background-size: 100% 100%;color:black;text-align: center;font-size: 25px;border-radius: 30px;border:black solid 0px}
+        .A-G-1{grid-area:A-G-1;background: url("chesses/B-G.svg");background-size: 100% 100%;color:black;text-align: center;font-size: 25px;border-radius: 30px;border:black solid 0px}
+        .A-S-0{grid-area:A-S-0;background: url("chesses/B-S.svg");background-size: 100% 100%;color:black;text-align: center;font-size: 25px;border-radius: 30px;border:black solid 0px}
+        .A-S-1{grid-area:A-S-1;background: url("chesses/B-S.svg");background-size: 100% 100%;color:black;text-align: center;font-size: 25px;border-radius: 30px;border:black solid 0px}
+        .A-S-2{grid-area:A-S-2;background: url("chesses/B-S.svg");background-size: 100% 100%;color:black;text-align: center;font-size: 25px;border-radius: 30px;border:black solid 0px}
+        .A-S-3{grid-area:A-S-3;background: url("chesses/B-S.svg");background-size: 100% 100%;color:black;text-align: center;font-size: 25px;border-radius: 30px;border:black solid 0px}
+        .A-S-4{grid-area:A-S-4;background: url("chesses/B-S.svg");background-size: 100% 100%;color:black;text-align: center;font-size: 25px;border-radius: 30px;border:black solid 0px}
+        .B-C-0{grid-area:B-C-0;background: url("chesses/R-C.svg");background-size: 100% 100%;color:red;text-align: center;font-size: 25px;border-radius: 30px;border:red solid 0px}
+        .B-H-0{grid-area:B-H-0;background: url("chesses/R-H.svg");background-size: 100% 100%;color:red;text-align: center;font-size: 25px;border-radius: 30px;border:red solid 0px}
+        .B-E-0{grid-area:B-E-0;background: url("chesses/R-E.svg");background-size: 100% 100%;color:red;text-align: center;font-size: 25px;border-radius: 30px;border:red solid 0px}
+        .B-Y-0{grid-area:B-Y-0;background: url("chesses/R-Y.svg");background-size: 100% 100%;color:red;text-align: center;font-size: 25px;border-radius: 30px;border:red solid 0px}
+        .B-K-0{grid-area:B-K-0;background: url("chesses/R-K.svg");background-size: 100% 100%;color:red;text-align: center;font-size: 25px;border-radius: 30px;border:red solid 0px}
+        .B-Y-1{grid-area:B-Y-1;background: url("chesses/R-Y.svg");background-size: 100% 100%;color:red;text-align: center;font-size: 25px;border-radius: 30px;border:red solid 0px}
+        .B-E-1{grid-area:B-E-1;background: url("chesses/R-E.svg");background-size: 100% 100%;color:red;text-align: center;font-size: 25px;border-radius: 30px;border:red solid 0px}
+        .B-H-1{grid-area:B-H-1;background: url("chesses/R-H.svg");background-size: 100% 100%;color:red;text-align: center;font-size: 25px;border-radius: 30px;border:red solid 0px}
+        .B-C-1{grid-area:B-C-1;background: url("chesses/R-C.svg");background-size: 100% 100%;color:red;text-align: center;font-size: 25px;border-radius: 30px;border:red solid 0px}
+        .B-G-0{grid-area:B-G-0;background: url("chesses/R-G.svg");background-size: 100% 100%;color:red;text-align: center;font-size: 25px;border-radius: 30px;border:red solid 0px}
+        .B-G-1{grid-area:B-G-1;background: url("chesses/R-G.svg");background-size: 100% 100%;color:red;text-align: center;font-size: 25px;border-radius: 30px;border:red solid 0px}
+        .B-S-0{grid-area:B-S-0;background: url("chesses/R-S.svg");background-size: 100% 100%;color:red;text-align: center;font-size: 25px;border-radius: 30px;border:red solid 0px}
+        .B-S-1{grid-area:B-S-1;background: url("chesses/R-S.svg");background-size: 100% 100%;color:red;text-align: center;font-size: 25px;border-radius: 30px;border:red solid 0px}
+        .B-S-2{grid-area:B-S-2;background: url("chesses/R-S.svg");background-size: 100% 100%;color:red;text-align: center;font-size: 25px;border-radius: 30px;border:red solid 0px}
+        .B-S-3{grid-area:B-S-3;background: url("chesses/R-S.svg");background-size: 100% 100%;color:red;text-align: center;font-size: 25px;border-radius: 30px;border:red solid 0px}
+        .B-S-4{grid-area:B-S-4;background: url("chesses/R-S.svg");background-size: 100% 100%;color:red;text-align: center;font-size: 25px;border-radius: 30px;border:red solid 0px}
+
+    </style>
+    
+    <style>
+        .em00{grid-area:em00;}
+        .em01{grid-area:em01;}
+        .em02{grid-area:em02;}
+        .em03{grid-area:em03;}
+        .em04{grid-area:em04;}
+        .em05{grid-area:em05;}
+        .em06{grid-area:em06;}
+        .em07{grid-area:em07;}
+        .em08{grid-area:em08;}
+        .em09{grid-area:em09;}
+        .em10{grid-area:em10;}
+        .em11{grid-area:em11;}
+        .em12{grid-area:em12;}
+        .em13{grid-area:em13;}
+        .em14{grid-area:em14;}
+        .em15{grid-area:em15;}
+        .em16{grid-area:em16;}
+        .em17{grid-area:em17;}
+        .em18{grid-area:em18;}
+        .em19{grid-area:em19;}
+        .em20{grid-area:em20;}
+        .em21{grid-area:em21;}
+        .em22{grid-area:em22;}
+        .em23{grid-area:em23;}
+        .em24{grid-area:em24;}
+        .em25{grid-area:em25;}
+        .em26{grid-area:em26;}
+        .em27{grid-area:em27;}
+        .em28{grid-area:em28;}
+        .em29{grid-area:em29;}
+        .em30{grid-area:em30;}
+        .em31{grid-area:em31;}
+        .em32{grid-area:em32;}
+        .em33{grid-area:em33;}
+        .em34{grid-area:em34;}
+        .em35{grid-area:em35;}
+        .em36{grid-area:em36;}
+        .em37{grid-area:em37;}
+        .em38{grid-area:em38;}
+        .em39{grid-area:em39;}
+        .em40{grid-area:em40;}
+        .em41{grid-area:em41;}
+        .em42{grid-area:em42;}
+        .em43{grid-area:em43;}
+        .em44{grid-area:em44;}
+        .em45{grid-area:em45;}
+        .em46{grid-area:em46;}
+        .em47{grid-area:em47;}
+        .em48{grid-area:em48;}
+        .em49{grid-area:em49;}
+        .em50{grid-area:em50;}
+        .em51{grid-area:em51;}
+        .em52{grid-area:em52;}
+        .em53{grid-area:em53;}
+        .em54{grid-area:em54;}
+        .em55{grid-area:em55;}
+        .em56{grid-area:em56;}
+        .em57{grid-area:em57;}
+        .em58{grid-area:em58;}
+        .em59{grid-area:em59;}
+        .em60{grid-area:em60;}
+        .em61{grid-area:em61;}
+        .em62{grid-area:em62;}
+        .em63{grid-area:em63;}
+        .em64{grid-area:em64;}
+        .em65{grid-area:em65;}
+        .em66{grid-area:em66;}
+        .em67{grid-area:em67;}
+        .em68{grid-area:em68;}
+        .em69{grid-area:em69;}
+        .em70{grid-area:em70;}
+        .em71{grid-area:em71;}
+        .em72{grid-area:em72;}
+        .em73{grid-area:em73;}
+        .em74{grid-area:em74;}
+        .em75{grid-area:em75;}
+        .em76{grid-area:em76;}
+        .em77{grid-area:em77;}
+        .em78{grid-area:em78;}
+        .em79{grid-area:em79;}
+        .em80{grid-area:em80;}
+        .em81{grid-area:em81;}
+        .em82{grid-area:em82;}
+        .em83{grid-area:em83;}
+        .em84{grid-area:em84;}
+        .em85{grid-area:em85;}
+        .em86{grid-area:em86;}
+        .em87{grid-area:em87;}
+        .em88{grid-area:em88;}
+        .em89{grid-area:em89;}
+    </style>
+    <style>
+        :root{
+            --width:360px;
+            --height:calc(var(--width)/9*10);
+            --screenWidth:500px;
+            --screenHeight:800px;
+        }
+        .chessContent{
+            /* position:absolute;
+            top:0px;
+            left: 0px; */
+            
+            width: 100%;
+            height: calc(var(--height)+20);
+            background-color: brown;
+            display:flex;
+            justify-content: center;
+        }.chessContener{
+            background-color: #8b4513;
+            padding: 10px;
+            width: var(--width);
+            height: var(--height);
+            background: url("chessPlat.png") no-repeat;
+            background-size:100% 100%;
+        }
+        
+        #chessPlatform {
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            width: var(--width);
+            height: var(--height);
+            /* background-color: gray; */
+            /* gap:50px; */
+            grid-template-areas: 
+            "........."
+            "........."
+            "........."
+            "........."
+            "........."
+            "........."
+            "........."
+            "........."
+            "........."
+            ".........";
+        }
+        #chessPlatform div{
+             /* margin: auto; */
+        }
+        .screenContener{
+            width:  var(--screenWidth);
+            height:  var(--screenHeight);
+            background-color: #555;
+        }
+        .header{
+            background-color: green;
+            width: 100%;
+            height: calc(var(--height)/5);
+            
+
+        }
+        .aaa {
+            　text-decoration:none;
+        }
+        .headerContent{
+            display:flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    </style>
+
+<div class = "screenContener">
+    <div class = "header">
+        <h1 style="text-align: center;font-size: 30px;color: rgb(238, 238, 64);">象棋小遊戲</h1>
+        <div class = "headerContent">
+            <button id = "reset">重設</button>
+            <button id = "lastStep">上一步</button>
+        </div>
+    </div>
+    <div class = "chessContent">
+        <div class = "chessContener">
+        <div class="lego" id = "chessPlatform">
+            <div class = "A-C-0"></div>
+            <div class = "A-H-0"></div>
+            <div class = "A-E-0"></div>
+            <div class = "A-Y-0"></div>
+            <div class = "A-K-0"></div>
+            <div class = "A-Y-1"></div>
+            <div class = "A-E-1"></div>
+            <div class = "A-H-1"></div>
+            <div class = "A-C-1"></div>
+            <div class = "A-G-0"></div>
+            <div class = "A-G-1"></div>
+            <div class = "A-S-0"></div>
+            <div class = "A-S-1"></div>
+            <div class = "A-S-2"></div>
+            <div class = "A-S-3"></div>
+            <div class = "A-S-4"></div>
+            <div class = "B-C-0"></div>
+            <div class = "B-H-0"></div>
+            <div class = "B-E-0"></div>
+            <div class = "B-Y-0"></div>
+            <div class = "B-K-0"></div>
+            <div class = "B-Y-1"></div>
+            <div class = "B-E-1"></div>
+            <div class = "B-H-1"></div>
+            <div class = "B-C-1"></div>
+            <div class = "B-G-0"></div>
+            <div class = "B-G-1"></div>
+            <div class = "B-S-0"></div>
+            <div class = "B-S-1"></div>
+            <div class = "B-S-2"></div>
+            <div class = "B-S-3"></div>
+            <div class = "B-S-4"></div>
+            <!--empty-->
+            <div class = "em00"></div>
+            <div class = "em01"></div>
+            <div class = "em02"></div>
+            <div class = "em03"></div>
+            <div class = "em04"></div>
+            <div class = "em05"></div>
+            <div class = "em06"></div>
+            <div class = "em07"></div>
+            <div class = "em08"></div>
+            <div class = "em09"></div>
+            <div class = "em10"></div>
+            <div class = "em11"></div>
+            <div class = "em12"></div>
+            <div class = "em13"></div>
+            <div class = "em14"></div>
+            <div class = "em15"></div>
+            <div class = "em16"></div>
+            <div class = "em17"></div>
+            <div class = "em18"></div>
+            <div class = "em19"></div>
+            <div class = "em20"></div>
+            <div class = "em21"></div>
+            <div class = "em22"></div>
+            <div class = "em23"></div>
+            <div class = "em24"></div>
+            <div class = "em25"></div>
+            <div class = "em26"></div>
+            <div class = "em27"></div>
+            <div class = "em28"></div>
+            <div class = "em29"></div>
+            <div class = "em30"></div>
+            <div class = "em31"></div>
+            <div class = "em32"></div>
+            <div class = "em33"></div>
+            <div class = "em34"></div>
+            <div class = "em35"></div>
+            <div class = "em36"></div>
+            <div class = "em37"></div>
+            <div class = "em38"></div>
+            <div class = "em39"></div>
+            <div class = "em40"></div>
+            <div class = "em41"></div>
+            <div class = "em42"></div>
+            <div class = "em43"></div>
+            <div class = "em44"></div>
+            <div class = "em45"></div>
+            <div class = "em46"></div>
+            <div class = "em47"></div>
+            <div class = "em48"></div>
+            <div class = "em49"></div>
+            <div class = "em50"></div>
+            <div class = "em51"></div>
+            <div class = "em52"></div>
+            <div class = "em53"></div>
+            <div class = "em54"></div>
+            <div class = "em55"></div>
+            <div class = "em56"></div>
+            <div class = "em57"></div>
+            <div class = "em58"></div>
+            <div class = "em59"></div>
+            <div class = "em60"></div>
+            <div class = "em61"></div>
+            <div class = "em62"></div>
+            <div class = "em63"></div>
+            <div class = "em64"></div>
+            <div class = "em65"></div>
+            <div class = "em66"></div>
+            <div class = "em67"></div>
+            <div class = "em68"></div>
+            <div class = "em69"></div>
+            <div class = "em70"></div>
+            <div class = "em71"></div>
+            <div class = "em72"></div>
+            <div class = "em73"></div>
+            <div class = "em74"></div>
+            <div class = "em75"></div>
+            <div class = "em76"></div>
+            <div class = "em77"></div>
+            <div class = "em78"></div>
+            <div class = "em79"></div>
+            <div class = "em80"></div>
+            <div class = "em81"></div>
+            <div class = "em82"></div>
+            <div class = "em83"></div>
+            <div class = "em84"></div>
+            <div class = "em85"></div>
+            <div class = "em86"></div>
+            <div class = "em87"></div>
+            <div class = "em88"></div>
+            <div class = "em89"></div>
+
+        </div>
+    </div>
+    </div>
+    
+</div>
+    <!-- <img src = "Xiangqi_board.svg" alt="chessPlat"> -->
+    
+</body>
+
+</html>
+<!-- ["A-C-0","A-H-0","A-E-0","A-Y-0","A-K-0","A-Y-1","A-E-1","A-H-1","A-C-1","A-G-0","A-G-1","A-S-0","A-S-1","A-S-2","A-S-3","A-S-4"]
+
+    
+["B-C-0","B-H-0","B-E-0","B-Y-0","B-K-0","B-Y-1","B-E-1","B-H-1","B-C-1","B-G-0","B-G-1","B-S-0","B-S-1","B-S-2","B-S-3","B-S-4"]
+
+["A-C-0","A-H-0","A-E-0","A-Y-0","A-K-0","A-Y-1","A-E-1","A-H-1","A-C-1","A-G-0","A-G-1","A-S-0","A-S-1","A-S-2","A-S-3","A-S-4","B-C-0","B-H-0","B-E-0","B-Y-0","B-K-0","B-Y-1","B-E-1","B-H-1","B-C-1","B-G-0","B-G-1","B-S-0","B-S-1","B-S-2","B-S-3","B-S-4"] -->

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src = "script/test3.js"></script>
+        <style>
+            #contain,#contain2{
+                display: none;
+            }
+            #contain3{
+                display: block;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id = "lab1">click me to slide</div>
+        <div id = "contain">
+            slideDown() only can down<br>
+            slideUp() only can down<br>
+            slideToggle() can do both<br>
+            and this is Toggle 
+        </div>
+    </p>
+        <div id = "lab2">down</div>
+        <div id = "contain2">This is down</div>
+</p>
+        <div id = "lab3">up</div>
+        <div id = "contain3">This is up</div>
+        <hr>
+<button id = "startAnimate">start</button><br>
+<img src="image/pr.png" alt="none" id = "primg">
+<hr>
+<p id = "p1">clone() 是用來複製HTML的<br>
+    不過最好不要複製ID,因為ID不能一樣
+
+</p>
+<button id = "button1">start</button>
+<hr>
+<script>
+$("#button1").click(function () { 
+    $("#p1").after($("#p1").clone());
+    
+});
+
+
+</script>
+
+<label id = "lab4" style="display: none;">fadein</label><button id = "button2">fadein</button><br>
+<label id = "lab5">fadeout</label><button id = "button3">fadeOut</button><br>
+<label id = "lab6">fadeToggle</label><button id = "button4">fadeToggle</button><br>
+<label id = "lab7" style="display: none;">fadeTo</label><button id = "button5">fadeTo</button><br>
+<label id = "lab8">fadeTo</label><button id = "button6">fadeTo</button><br>
+<script>
+    $(document).ready(function () {
+        $("#button2").click(function () { 
+            $("#lab4").fadeIn();            
+        });
+        $("#button3").click(function () { 
+            $("#lab5").fadeOut();            
+        });
+        $("#button4").click(function () { 
+            $("#lab6").fadeToggle();            
+        });
+        $("#button5").click(function () { 
+            $("#lab7").fadeTo("slow", 1);
+        });
+        $("#button6").click(function () { 
+            $("#lab8").fadeTo("slow", 0.3);
+        });
+    });
+</script>
+    </body>
+</html>

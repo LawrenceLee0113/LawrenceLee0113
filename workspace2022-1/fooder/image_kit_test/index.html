@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>增加餐廳數量</title>
+    <script src="../static/script/jquery3.6.0.js"></script>
+
+    <!--     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+
+</head>
+
+<body>
+    <input type="text" id="restaurant_title" /><label>餐廳名稱</label></p>
+    <input type="text" id="restaurant_img_url" /><label>餐廳照片</label> <input type="file"
+        id="restaurant_img_url_file_btn"></p>
+    <input type="text" id="menu_img_url" /><label>菜單照片</label> <input type="file" id="menu_img_url_file_btn"></p>
+    <input type="text" id="menu_text" /><label>menu_text(?</label></p>
+    <input type="text" id="prefer_dish_img_url" /><label>推薦餐點照片</label><input type="file"
+        id="prefer_dish_img_url_file_btn"></p>
+    <input type="text" id="prefer_dish_text" /><label>推薦餐點名稱</label></p>
+    <input type="text" id="restaurant_googlemap_link" /><label>餐廳google maps網址</label></p>
+
+    <button id="submit">送出</button>
+    <script>
+        $(document).ready(function () {
+            $("#submit").click(function (e) {
+                data = {
+                    restaurant_title: $("#restaurant_title").val(),
+                    restaurant_img_url: $("#restaurant_img_url").val(),
+                    menu_img_url: $("#menu_img_url").val(),
+                    menu_text: $("#menu_text").val(),
+                    prefer_dish_img_url: $("#prefer_dish_img_url").val(),
+                    prefer_dish_text: $("#prefer_dish_text").val(),
+                    restaurant_googlemap_link: $("#restaurant_googlemap_link").val()
+                }
+
+                $.post("https://fooder.nutccsiejar.repl.co/add", data,
+                    function (data, textStatus, jqXHR) {
+                        alert(data.messenge)
+                    },
+                    "json"
+                );
+            });
+        });
+    </script>
+
+    <script>
+        var authenticationEndpoint = "https://fooder.nutccsiejar.repl.co/uploadImage";
+        function upload() {
+            var file = document.getElementById(this.id);
+            var formData = new FormData();
+            formData.append("file", file.files[0]);
+            formData.append("fileName", "abc.jpg");
+            formData.append("publicKey", "public_4YpxagNybX9kAXW6yNx8x9XnFX0=");
+            alert("upload success")
+            // Let's get the signature, token and expire from server side
+            $.ajax({
+                url: authenticationEndpoint,
+                method: "GET",
+                dataType: "json",
+                success: function (body) {
+                    alert("get my web site key success")
+                    formData.append("signature", body.signature || "");
+                    formData.append("expire", body.expire || 0);
+                    formData.append("token", body.token);
+
+                    // Now call ImageKit.io upload API
+                    $.ajax({
+                        url: "https://upload.imagekit.io/api/v1/files/upload",
+                        method: "POST",
+                        mimeType: "multipart/form-data",
+                        dataType: "json",
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        error: function (jqxhr, text, error) {
+                            console.log(error)
+                        },
+                        success: function (body) {
+                            alert("get url success")
+                            switch (this.id) {
+                                case "restaurant_img_url_file_btn": {
+                                    $("#restaurant_img_url").val(body.url);
+                                    break;
+                                }
+                                case "menu_img_url_file_btn": {
+                                    $("#menu_img_url").val(body.url);
+                                    break;
+                                }
+                                case "prefer_dish_img_url_file_btn": {
+                                    $("#prefer_dish_img_url").val(body.url);
+                                    break;
+                                }
+
+                            }
+                        }
+                    });
+
+                },
+
+                error: function (jqxhr, text, error) {
+                    console.log(arguments);
+                }
+            });
+        }
+        $(document).ready(function () {
+            $("input[type='file']").change(function (e) {
+                console.log(this.id);
+                upload()
+
+
+            });
+        });
+    </script>
+</body>
+
+</html>

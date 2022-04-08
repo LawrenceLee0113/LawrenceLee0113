@@ -1,0 +1,30 @@
+.content{
+    /* position: relative; */
+    /* background-color: rgb(73, 66, 66); */
+    /* border: 1px black solid; */
+    margin: 0px 0px 0px 100px;
+    width: 1300px;
+    /* height: 600px; */
+    z-index: -1;
+    /* background-color: rgb(20, 20, 20); */
+    /* display:flex;
+    justify-content: center;
+    align-items: center; */
+
+
+}
+
+.contentText{
+    padding:20px 10px 20px 10px;
+    
+    /* width: 900px; */
+    /* height: 550px; */
+    /* word-wrap:break-word; */
+    /* background-color: #555; */
+}
+.iframe-content{
+    /* background-color: red; */
+    width: 100%;
+    /* height: 100%; */
+
+}

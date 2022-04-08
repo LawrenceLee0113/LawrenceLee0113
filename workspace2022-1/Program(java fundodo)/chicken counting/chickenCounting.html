@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>會計簡單計算</title>
+        <script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src = "script/counting.js"></script>
+    </head>
+    <body>
+        <div id = "inputArea">
+            <!--
+            <div class = "inputItem">
+                <label class = "inputLabel" for = ""></label>
+                <input value = "" id = "">
+                <br>
+            </div>
+            -->
+
+            
+
+            <!-- 日流量 -->
+            <div class = "inputItem">
+                <label class = "inputLabel" for = "flow">每天消費者數： </label>
+                <input value = "100" id = "flow">
+                <br>
+            </div>
+            <!-- 單人消費 -->
+            <div class = "inputItem">
+                <label class = "inputLabel" for = "consumption">每人平均消費： </label>
+                <input value = "200" id = "consumption">
+                <br>
+            </div>
+            <!-- 日營收 -->
+            <div class = "inputItem">
+                <label class = "inputLabel" for = "revenue">日營收： </label>
+                <input value = "" id = "revenue" placeholder="( 和上面兩個擇一寫 )">
+                <br>
+            </div>
+
+            <!-- 毛利率 -->
+            <div class = "inputItem">
+                <label class = "inputLabel" for = "grossMargin">毛利率(%)：</label>
+                <input value = "60" id = "grossMargin">
+                <br>
+            </div>
+            
+            <!-- 單月工日 一個月工作幾天-->
+            <div class = "inputItem">
+                <label class = "inputLabel" for = "workingDayOfMonth">一個月工作幾天： </label>
+                <input value = "30" id = "workingDayOfMonth">
+                <br>
+            </div>
+            <!-- 人數-->
+            <div class = "inputItem">
+                <label class = "inputLabel" for = "peopleAmount">店員數： </label>
+                <input value = "2" id = "peopleAmount">
+                <br>
+            </div>
+            <!-- 時薪 -->
+            <div class = "inputItem">
+                <label class = "inputLabel" for = "hourPay">時薪： </label>
+                <input value = "150" id = "hourPay">
+                <br>
+            </div>
+            <!-- 工時 -->
+            <div class = "inputItem">
+                <label class = "inputLabel" for = "workingHourOfDay">一天工時： </label>
+                <input value = "8" id = "workingHourOfDay">
+                <br>
+            </div>
+            <!-- 總投入成本 -->
+            <div class = "inputItem">
+                <label class = "inputLabel" for = "totalCost">總投入成本： </label>
+                <input value = "200000" id = "totalCost">
+                <br>
+            </div>
+            <!-- 房租 -->
+            <div class = "inputItem">
+                <label class = "inputLabel" for = "vendorRent">房租： </label>
+                <input value = "38000" id = "vendorRent">
+                <br>
+            </div>
+        </div>
+        <hr>
+        <div id = "outputArea">
+            <button id = "countingBtn">start counting</button>
+            <label>←click here</label>
+            </p>
+            <div id = outputStr></div>
+        </div>
+    </body>
+</html>

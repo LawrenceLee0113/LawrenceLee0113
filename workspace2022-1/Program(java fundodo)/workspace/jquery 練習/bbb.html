@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+        <script src = "inputBox.js"></script>
+    </head>
+    <body>
+        <img src = 'image/right.png' id = 'img'><label style='size: px;'>title</label>
+        <div id = 'ppp' style='display: none;'>
+<script>
+    $("#ppp").append(creatTri());
+</script>
+<!-- "<button id = 'complete'>完成</button>\
+<button id = 'changeHtml' style='display: none;'>更改</button>\
+<div id = 'inputBox'>\
+<input type = 'text' placeholder='請輸入HTML' id = 'inputHtml'><br>\
+</div>\
+<div id = 'outputBox'>\
+</div>\
+<script>\
+    $('#complete').click(function(){\
+        var str = $('#inputHtml').val();\
+        $(this).hide();\
+        $('#changeHtml').show();\
+        $('#inputBox').hide();\
+        $('#outputBox').html(str);\
+    })\
+    $('#changeHtml').click(function(){\
+        $('#complete').show();\
+        $(this).hide();\
+        $('#outputBox').empty();\
+        $('#inputBox').show();\
+    })\
+</script></div>" -->
+
+<script>
+    $('#img').mouseenter(function(){
+        let src = $(this).attr('src');
+        if (src == 'image/right.png'){
+            $(this).attr('src','image/onright.png');
+        }else if(src == 'image/down.png'){
+            $(this).attr('src','image/ondown.png');
+        }
+    }).click(function(){
+        let src = $(this).attr('src');
+        if (src == 'image/ondown.png'){
+            $(this).attr('src','image/onright.png');
+            $('#ppp').hide();
+        }else if(src == 'image/onright.png'){
+            $(this).attr('src','image/ondown.png');
+            $('#ppp').show();
+        }
+    }).mouseleave(function(){
+        let src = $(this).attr('src');
+        if (src == 'image/onright.png'){
+            $(this).attr('src','image/right.png');
+        }else if(src == 'image/ondown.png'){
+            $(this).attr('src','image/down.png');
+        }
+    })
+</script>
+    </body>
+</html>

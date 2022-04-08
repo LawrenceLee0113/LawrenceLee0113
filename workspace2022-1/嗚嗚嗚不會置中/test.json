@@ -1,0 +1,365 @@
+{
+    "res_echo": "pass",
+    "class_type": "學生",
+    "new_flg": "no",
+    "st_id": "1111032015",
+    "st_name": "卓家睿",
+    "st_name": "卓家睿",
+    "phone": "0983805116",
+    "class_no": "日資工科1甲",
+    "device": [
+        {
+            "device_no": "*POSTA*",
+            "device_name": "海報立架 1(小)"
+        },
+        {
+            "device_no": "*POSTB*",
+            "device_name": "海報立架 2(小)"
+        },
+        {
+            "device_no": "*POSTC*",
+            "device_name": "海報立架 3(小)"
+        },
+        {
+            "device_no": "BELL 02",
+            "device_name": "BELL 02"
+        },
+        {
+            "device_no": "BELL 04",
+            "device_name": "BELL 04"
+        },
+        {
+            "device_no": "BELL 06",
+            "device_name": "BELL 06"
+        },
+        {
+            "device_no": "BELL 09",
+            "device_name": "BELL 09"
+        },
+        {
+            "device_no": "BELL 11",
+            "device_name": "BELL 11"
+        },
+        {
+            "device_no": "BOX0009",
+            "device_name": "教室通用9"
+        },
+        {
+            "device_no": "BOX0010",
+            "device_name": "教室盒通用10"
+        },
+        {
+            "device_no": "BOX0011",
+            "device_name": "教室盒通用11"
+        },
+        {
+            "device_no": "BOX0012",
+            "device_name": "教室盒通用12"
+        },
+        {
+            "device_no": "BOX0014",
+            "device_name": "教室盒通用14"
+        },
+        {
+            "device_no": "BOX0015",
+            "device_name": "教室盒通用15"
+        },
+        {
+            "device_no": "BOX0016",
+            "device_name": "教室盒通用16"
+        },
+        {
+            "device_no": "BOX6704",
+            "device_name": "教室盒6704"
+        },
+        {
+            "device_no": "BOX6801",
+            "device_name": "教室盒6801"
+        },
+        {
+            "device_no": "BOX6802",
+            "device_name": "教室盒6802"
+        },
+        {
+            "device_no": "BOX6803",
+            "device_name": "教室盒6803"
+        },
+        {
+            "device_no": "BOX6804",
+            "device_name": "教室盒6804"
+        },
+        {
+            "device_no": "BOX6901",
+            "device_name": "教室盒6901"
+        },
+        {
+            "device_no": "CAMERA0255",
+            "device_name": "單眼0255"
+        },
+        {
+            "device_no": "CAMERA0257",
+            "device_name": "單眼0257"
+        },
+        {
+            "device_no": "CAMERA0260",
+            "device_name": "錄影機0260"
+        },
+        {
+            "device_no": "CAMERA030",
+            "device_name": "錄影機030"
+        },
+        {
+            "device_no": "CAMERA031",
+            "device_name": "錄影機031"
+        },
+        {
+            "device_no": "CAMERA0351",
+            "device_name": "錄影機0351"
+        },
+        {
+            "device_no": "CAMERA051",
+            "device_name": "數位相機051"
+        },
+        {
+            "device_no": "Ear",
+            "device_name": "耳溫槍"
+        },
+        {
+            "device_no": "EXTENSION CORD",
+            "device_name": "延長線"
+        },
+        {
+            "device_no": "HDMI001",
+            "device_name": "HDMI線"
+        },
+        {
+            "device_no": "KEY CARD A",
+            "device_name": "萬用磁扣 A"
+        },
+        {
+            "device_no": "KEY CARD B",
+            "device_name": "萬用磁扣 B"
+        },
+        {
+            "device_no": "KEY6204",
+            "device_name": "6204防潮箱"
+        },
+        {
+            "device_no": "KEY6205",
+            "device_name": "6205防潮箱"
+        },
+        {
+            "device_no": "KEY6702",
+            "device_name": "鑰匙6702"
+        },
+        {
+            "device_no": "KEY6901",
+            "device_name": "鑰匙6901"
+        },
+        {
+            "device_no": "KEY6902",
+            "device_name": "鑰匙6902A"
+        },
+        {
+            "device_no": "KEY6902B",
+            "device_name": "鑰匙6902B"
+        },
+        {
+            "device_no": "KEY6903",
+            "device_name": "鑰匙6903"
+        },
+        {
+            "device_no": "KEYBOARD001",
+            "device_name": "無線鍵盤與滑鼠"
+        },
+        {
+            "device_no": "LASER POINTER A",
+            "device_name": "簡報筆A"
+        },
+        {
+            "device_no": "LASER POINTER B",
+            "device_name": "簡報筆B"
+        },
+        {
+            "device_no": "LASER POINTER C",
+            "device_name": "簡報筆C"
+        },
+        {
+            "device_no": "LASER POINTER E",
+            "device_name": "簡報筆E"
+        },
+        {
+            "device_no": "MEMORYCARD A",
+            "device_name": "記憶卡A"
+        },
+        {
+            "device_no": "MEMORYCARD B",
+            "device_name": "記憶卡B"
+        },
+        {
+            "device_no": "MEMORYCARD C",
+            "device_name": "記憶卡C"
+        },
+        {
+            "device_no": "MEMORYCARD D",
+            "device_name": "記憶卡D"
+        },
+        {
+            "device_no": "MEMORYCARD E",
+            "device_name": "記憶卡E"
+        },
+        {
+            "device_no": "MEMORYCARD F",
+            "device_name": "記憶卡F"
+        },
+        {
+            "device_no": "MIC058",
+            "device_name": "手提麥克風58"
+        },
+        {
+            "device_no": "MIC059",
+            "device_name": "手提麥克風59"
+        },
+        {
+            "device_no": "NOTEBOOK 21",
+            "device_name": "筆電21號"
+        },
+        {
+            "device_no": "NOTEBOOK 22",
+            "device_name": "筆電22號"
+        },
+        {
+            "device_no": "NOTEBOOK 24",
+            "device_name": "筆電24號"
+        },
+        {
+            "device_no": "NOTEBOOK 25",
+            "device_name": "筆電25號"
+        },
+        {
+            "device_no": "POWERBANK A",
+            "device_name": "行動電源A"
+        },
+        {
+            "device_no": "POWERBANK B",
+            "device_name": "行動電源B"
+        },
+        {
+            "device_no": "POWERBANK C",
+            "device_name": "行動電源C"
+        },
+        {
+            "device_no": "PROJECTOR A",
+            "device_name": "視訊攝影機"
+        },
+        {
+            "device_no": "PROJECTOR B",
+            "device_name": "視訊攝影機"
+        },
+        {
+            "device_no": "PROJECTOR C",
+            "device_name": "視訊攝影機"
+        },
+        {
+            "device_no": "PROJECTOR E",
+            "device_name": "可攜投影機"
+        },
+        {
+            "device_no": "RECORDING PEN A",
+            "device_name": "錄音筆A"
+        },
+        {
+            "device_no": "TRIPOD A",
+            "device_name": "腳架A"
+        },
+        {
+            "device_no": "TRIPOD B",
+            "device_name": "腳架B"
+        },
+        {
+            "device_no": "TRIPOD C",
+            "device_name": "腳架C"
+        },
+        {
+            "device_no": "TRIPOD D",
+            "device_name": "腳架D"
+        },
+        {
+            "device_no": "TRIPOD F",
+            "device_name": "腳架F"
+        },
+        {
+            "device_no": "TRIPOD G",
+            "device_name": "腳架G"
+        },
+        {
+            "device_no": "TRIPOD H",
+            "device_name": "腳架H"
+        },
+        {
+            "device_no": "WALKIE TALKIE A",
+            "device_name": "對講機A"
+        },
+        {
+            "device_no": "WALKIE TALKIE B",
+            "device_name": "對講機B"
+        },
+        {
+            "device_no": "WALKIE TALKIE C",
+            "device_name": "對講機C"
+        },
+        {
+            "device_no": "WALKIE TALKIE D",
+            "device_name": "對講機D"
+        }
+    ],
+    "lend_device": [
+        {
+            "device_no": "BOX0013",
+            "in_date": "2021-12-24",
+            "device_name": "教室盒通用13"
+        },
+        {
+            "device_no": "BOX6703",
+            "in_date": "2021-12-24",
+            "device_name": "教室盒6703"
+        },
+        {
+            "device_no": "BOX6903",
+            "in_date": "2021-12-24",
+            "device_name": "教室盒6903"
+        },
+        {
+            "device_no": "CAMERA800D",
+            "in_date": "2021-12-21",
+            "device_name": "800D(單眼)"
+        },
+        {
+            "device_no": "KEY6705",
+            "in_date": "2021-12-23",
+            "device_name": "鑰匙6705"
+        },
+        {
+            "device_no": "TRIPOD E",
+            "in_date": "2021-12-23",
+            "device_name": "腳架E"
+        }
+    ],
+    "lend": []
+}
+
+{
+    "res_echo": "pass",
+    "class_type": "學生",
+    "new_flg": "yes",
+    "phone": "",
+    "st_id": "1111032026",
+    "st_name": "賴家煜",
+    "sch_type": "1",
+    "sch_dep": "1",
+    "dep_id": "231",
+    "class_yy": "110",
+    "class_no": "日資工科1甲"
+}
+
+{"res_echo":"ePortal 帳號 OR 密碼錯誤"}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src = "https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src = "script/test.js"></script>
+    </head>
+    <style>
+        .math{
+            width: 50px;
+        }
+        .div{
+            display: none;
+        }
+        #startLabel,#startGameBt,#imgKing,#labKing{
+            display: none;
+        }
+        /* body {
+  background-image: url('img/taiwan.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+} */
+    </style>
+    <body>
+        <div class = "div" id = "startScn">
+            <br><br><br>
+            <h3 id = "startLabel" >歡迎勇者到來這個充滿數字的島嶼，請幫大家打倒魔王!!</h3>
+            <br><br><br>
+            <button id = "startGameBt" >開始遊戲</button>
+            <br><br>
+            <label id = "labKing"> ⬇他就是數字魔王，猜中數字即可打倒他</label><br>  
+            <img src = "img/king1.jpg" alt = "king1" id = "imgKing">
+        </div>
+        <div class = "div" id = "inputBox">
+            <label>請猜一個1~100的數字</label><br>
+            <label>🍕輸入結果</label>
+            <input style="height: 40px;size: 35px;" id = "result">
+        </div>
+        <div class = "div" id = "outputBox0">
+            <label>不好不好，數字太大了，魔王躲開了你的攻擊</label>
+            <button class = "reinput">重新輸入</button><br>
+            <img src = "img/king4.jpg" alt = "king4">
+        </div>
+        <div class = "div" id = "outputBox1">
+            <label>不好不好，數字太小了，魔王躲開了你的攻擊</label>
+            <button class = "reinput">重新輸入</button><br>
+            <img src = "img/king4.jpg" alt = "king4">
+
+        </div>
+        <div class = "div" id = "outputBox2">
+            <hr>
+            <label>恭喜你打倒魔王!!</label>
+            <label id = "times"></label>
+            <button id = "replay">重新遊玩</button><br>
+            <button id = "nextLevel">下一關</button><br>
+            <hr>
+            <img src="img/king2.jpg" alt="king2" width="400px">
+            <img src = "img/pass.png" alt = "pass" width="400px">
+        </div>
+        <div class = "div" id = "outputBox3">
+            <br>
+            <br>
+            
+            <img src="img/king5.jpg" alt="king5" width="400px">
+
+            <br>
+            <label>ㄏㄟˊ 你連數字輸入都不會啊，那麼弱?</label><br>
+            <br>
+            <label>提示： 請輸入數字(1~100)</label><br>
+            <button class = "reinput">重新輸入</button>
+        </div>
+        
+        <div id = "countM" class="div">
+            <hr>
+            <img src = "img/math1.jpg" alt = "1" class = "math">
+            <img src = "img/math2.jpg" alt = "2" class = "math">
+            <img src = "img/math3.jpg" alt = "3" class = "math"><br>
+            <img src = "img/math4.jpg" alt = "4" class = "math">
+            <img src = "img/math5.jpg" alt = "5" class = "math">
+            <img src = "img/math6.jpg" alt = "6" class = "math"><br>
+            <img src = "img/math7.jpg" alt = "7" class = "math">
+            <img src = "img/math8.jpg" alt = "8" class = "math">
+            <img src = "img/math9.jpg" alt = "9" class = "math"><br>
+            <img src = "img/del.jpg" alt="del"class = "math">
+            <img src = "img/math0.jpg" alt = "0" class = "math" id = "math0">
+            <img src = "img/enter.jpg" alt="enter"class = "math">
+            
+                <hr>
+                <h2>猜數字紀錄</h2>
+                <p id = "recordP">--沒有紀錄--</p>
+        </div>
+        
+    </body>
+</html>

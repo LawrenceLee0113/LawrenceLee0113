@@ -1,0 +1,2 @@
+myscore = input()
+mysore = 

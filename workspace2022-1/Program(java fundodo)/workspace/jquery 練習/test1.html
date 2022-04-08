@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js">
+  </script>
+</head>
+<body>
+<div style="height:100px;width:300px;border:1px solid black;background-color:yellow;" id = "div1">
+<label>This is a label</label>
+<p>This is a paragraph</p>
+<p>This is another paragraph</p>
+<p></p>
+</div>
+<button id = "start1">開始</button>
+<p>This method is empty() <br> delete inside of div</p>
+<script>
+    $("#start1").click(function(){
+    $("#div1").empty();
+})
+</script>
+<hr>
+<div style="height:100px;width:300px;border:1px solid black;background-color:yellow;" id = "div2">
+    <label>This is a label</label>
+    <p>This is a paragraph</p>
+    <p>This is another paragraph</p>
+    <p></p>
+    </div>
+    <button id = "start2">開始</button>
+    <p>This method is remove() <br> delete whole of div</p>
+    <script>
+        $("#start2").click(function(){
+        $("#div2").remove();
+    })
+    </script>
+<hr>
+<div style="height:100px;width:300px;border:1px solid black;background-color:yellow;" id = "div3">
+    <label>This is a label</label>
+    <p>This is a paragraph</p>
+    <p>This is another paragraph</p>
+    <p></p>
+    </div>
+    <button id = "start3">開始</button>
+    <p>This method is remove() <br> delete whole of div but reture delete value</p>
+    This is return value：
+    <p id = "returnVal"></p>
+    <script>
+        $("#start3").click(function(){
+        var inside = $("#div3").detach();
+        $("#returnVal").html(inside);
+    })
+    </script>
+<hr>
+<button id = "start3">刪除1</button>
+<button id = "start4">刪除2</button>
+</p>
+<p class = "text">123123</p>
+<p class = "notText">321321</p>
+<p class = "text">123123</p>
+<p class = "notText">321321</p>
+<p class = "text">123123</p>
+<p class = "notText">321321</p>
+<p class = "text">123123</p>
+<script>
+    $("#start3").click(function(){
+        $("p").remove(".text")
+    })
+    $("#start4").click(function(){
+        $("p.text").remove()
+
+    })
+</script>
+<hr>
+<button id = "aa">click</button><label id = "a">狀態1</label>
+<button id = "cc">mouseenter</button><label id = "c">狀態1</label>
+<button id = "dd">mouseleave</button><label id = "d">狀態1</label>
+<button id = "ee">mousedown</button><label id = "e">狀態1</label>
+<button id = "ff">mouseup</button><label id = "f">狀態1</label>
+<button id = "gg">hover</button><label id = "g">狀態1</label>
+<button id = "bb">bdlclick</button><label id = "b">狀態1</label>
+<script>
+    $("#aa").click(function(){
+        $("#a").html("狀態2")
+    })
+    $("#cc").mouseenter(function(){
+        $("#c").html("狀態2")
+    })
+    $("#dd").mouseleave(function(){
+        $("#d").html("狀態2")
+    })
+    $("#ee").mousedown(function(){
+        $("#e").html("狀態2")
+    })
+    $("#ff").mouseup(function(){
+        $("#f").html("狀態2")
+    })
+    $("#gg").hover(function(){
+        $("#g").html("狀態2")
+    })
+    // $("#bb").click(function(){
+    //     $("#b").html("狀態2")
+    // })
+</script>
+<hr>
+<p id = "xxx">This is a line</p>
+<script>
+    $("#xxx").on("click",function(){
+        $(this).hide();
+    })
+</script>
+<hr>
+<img src = "image/right.png" id = "img"><label style="size: px;">title</label>
+
+    <p id = "ppp" style="display: none;">This is a line</p>
+<script>
+// "down.png"
+// "right.png"
+// "ondown.png"
+// "onright.png"
+    $("#img").mouseenter(function(){
+        let src = $(this).attr("src");
+        if (src == "image/right.png"){
+            $(this).attr("src","image/onright.png");
+        }else if(src == "image/down.png"){
+            $(this).attr("src","image/ondown.png");
+        }
+    }).click(function(){
+        let src = $(this).attr("src");
+        if (src == "image/ondown.png"){
+            $(this).attr("src","image/onright.png");
+            $("#ppp").hide();
+        }else if(src == "image/onright.png"){
+            $(this).attr("src","image/ondown.png");
+            $("#ppp").show();
+
+        }
+    }).mouseleave(function(){
+        let src = $(this).attr("src");
+        if (src == "image/onright.png"){
+            $(this).attr("src","image/right.png");
+        }else if(src == "image/ondown.png"){
+            $(this).attr("src","image/down.png");
+        }
+    })
+    
+</script>
+<hr>
+<button id = "complete">完成</button><button id = "changeHtml">更改</button>
+
+<div id = "inputBox">
+    <input type = "text" placeholder="請輸入HTML" id = "inputHtml"><br>
+</div>
+<div id = "outputBox">
+
+</div>
+<script>
+    $("#complete").click(function(){
+        var str = $("#inputHtml").val();
+        $("#inputBox").hide();
+        $("#outputBox").html(str);
+    })
+    $("#changeHtml").click(function(){
+        console.log(123123);
+        $("#outputBox").empty();
+        $("#inputBox").show();
+    })
+</script>
+<hr>
+<h2>以上兩個的綜合體</h2>
+<a href = "test2(triangleSelet).html">按此前往</a>
+</p>
+<hr>
+<input type = "text" id = "hjkl">
+<input type = "button" id = "asdf" val = "click me">
+
+<label id = "fdsa">這是一航文字</label>
+<script>
+    $("#asdf").click(function(){
+        let id = $("#hjkl").val();
+        $("#" + id).hide();
+    })
+</script>
+<hr>
+這<br>
+個<br>
+是<br>
+總<br>
+攬<br>
+</body>
+</html>
