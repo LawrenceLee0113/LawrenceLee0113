@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-30T06:07:56.066Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36 Edg/103.0.1264.37" etag="pLeKETc7BywnnKIr3feD" version="20.0.4" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2022-06-30T06:13:23.659Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36 Edg/103.0.1264.37" etag="qlJw-oYH_dd2G8SgjTXZ" version="20.0.4" type="github" pages="3">
   <diagram id="_vvt5JsC5poTHi2t1kRt" name="第1頁">
     <mxGraphModel dx="1038" dy="1708" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#666666" math="0" shadow="0">
       <root>
@@ -520,6 +520,9 @@
         <mxCell id="xMVcRj3Rr09nJTLdkoEn-1" value="動作" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="354" y="122" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="_guu2WWADMYf4MQBxIc8-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="xMVcRj3Rr09nJTLdkoEn-3" target="xMVcRj3Rr09nJTLdkoEn-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="xMVcRj3Rr09nJTLdkoEn-3" value="新增" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-99" y="224" width="120" height="60" as="geometry" />
         </mxCell>
@@ -539,10 +542,43 @@
     </mxGraphModel>
   </diagram>
   <diagram id="zZE-y9bboT51KGp_EKce" name="人物件-後端">
-    <mxGraphModel dx="1038" dy="539" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1038" dy="539" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#808080" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="TMAw6nSQ4GsnKdry_1Dm-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="TMAw6nSQ4GsnKdry_1Dm-1" target="TMAw6nSQ4GsnKdry_1Dm-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TMAw6nSQ4GsnKdry_1Dm-1" value="人 物件" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="59" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TMAw6nSQ4GsnKdry_1Dm-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="TMAw6nSQ4GsnKdry_1Dm-2" target="TMAw6nSQ4GsnKdry_1Dm-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TMAw6nSQ4GsnKdry_1Dm-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="TMAw6nSQ4GsnKdry_1Dm-2" target="TMAw6nSQ4GsnKdry_1Dm-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TMAw6nSQ4GsnKdry_1Dm-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="TMAw6nSQ4GsnKdry_1Dm-2" target="TMAw6nSQ4GsnKdry_1Dm-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TMAw6nSQ4GsnKdry_1Dm-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="TMAw6nSQ4GsnKdry_1Dm-2" target="TMAw6nSQ4GsnKdry_1Dm-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TMAw6nSQ4GsnKdry_1Dm-2" value="身分" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="688" y="161" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TMAw6nSQ4GsnKdry_1Dm-4" value="認證" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="542" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TMAw6nSQ4GsnKdry_1Dm-5" value="未認證" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="719" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TMAw6nSQ4GsnKdry_1Dm-6" value="訪客" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="898" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TMAw6nSQ4GsnKdry_1Dm-7" value="一般" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1074" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
